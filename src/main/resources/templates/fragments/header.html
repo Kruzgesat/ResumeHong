@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<div th:fragment="header">
+    <nav>
+        <div class="imgBox">
+            <a class="navbar-brand" href="/index">
+                <img src="/image/logo_text.png" alt="로고">
+            </a>
+        </div>
+        <div class="menuDiv">
+            <ul class="menu">
+                <li>
+                    <a href="/board/popular" sec:authorize="isAuthenticated()">인기 이력서</a>
+                </li>
+                <li>
+                    <a href="/board/newresume" sec:authorize="isAuthenticated()">신규 이력서</a>
+                </li>
+                <li>
+                    <a href="/board/questionKnowhow" sec:authorize="isAuthenticated()">질문 / 노하우</a>
+                </li>
+            </ul>
+        </div>
+        <div class="userInfo" onmouseover="toggleDropdown()" onmouseleave="hideDropdown()">
+            <li class="dropdown">
+                <div class="dropdown-toggle" onclick="toggleDropdown()">
+                    <label class="nickname" th:text="${#authentication.principal.nickname}">사용자</label> 님
+                </div>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a onmouseover="toggleDropdown()" href="/member/logout">로그아웃</a>
+                    <a onmouseover="toggleDropdown()"
+                       th:href="@{/user/mypage(userId=${#authentication.principal.username},
+                                number=${#authentication.principal.number})}">마이페이지</a>
+                </div>
+            </li>
+        </div>
+    </nav>
+
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            dropdownContent.classList.toggle("show");
+        }
+
+        function hideDropdown() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            dropdownContent.classList.remove("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-toggle')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</div>
+</html>
