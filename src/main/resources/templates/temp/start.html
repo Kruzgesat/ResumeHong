@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+<head>
+    <link th:href="@{/css/start.css}" rel="stylesheet">
+</head>
+
+<body>
+<div layout:fragment="content">
+    <h2>최근 나의 이력서</h2>
+    <div class="resume">
+        <h3>홍길동</h3>
+        <p><strong>이메일:</strong> hong@example.com</p>
+        <p><strong>연락처:</strong> 010-1234-5678</p>
+        <p><strong>경력:</strong></p>
+        <ul>
+            <li>2020-2022: XX 회사, 프론트엔드 개발자</li>
+            <li>2018-2020: XYZ 회사, 웹 디자이너</li>
+        </ul>
+        <p><strong>학력:</strong></p>
+        <ul>
+            <li>2024: 인하공업전문대학 컴퓨터시스템공학과 졸업</li>
+        </ul>
+    </div>
+
+    <h2>관련 문서</h2>
+    <div class="documents">
+        <p>아래는 관련 문서입니다:</p>
+        <ul>
+            <li><a href="/resume/1" target="_blank">포트폴리오</a></li>
+            <li><a href="/resume/2" target="_blank">자기소개서</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
