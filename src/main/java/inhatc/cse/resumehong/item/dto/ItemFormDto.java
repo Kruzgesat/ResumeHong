@@ -33,8 +33,6 @@ public class ItemFormDto {
     @NotBlank(message = "상품설명은 필수항목 입니다.")
     private String itemDetail;  //Product Detail Information
 
-    private ItemSellStatus itemSellStatus; //Sales Status
-
     private List<ItemImgDto> itemImgDtoList = new ArrayList<>(); //Product Image List
 
     private List<Long> itemImgIds = new ArrayList<>(); //Product Image ID List
