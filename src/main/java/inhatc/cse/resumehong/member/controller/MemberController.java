@@ -71,7 +71,7 @@ public class MemberController {
             return "member/add";
         }
 
-        return "redirect:/";
+        return "redirect:/member/login";
     }
 
 }

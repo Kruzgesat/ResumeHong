@@ -5,6 +5,15 @@ spring:
   application:
   name: ResumeHong
 
+  mvc:
+    contentnegotiation:
+      media-types:
+        png: image/png
+
+  web:
+    resources:
+      static-locations: classpath:/static/, classpath:/public/, classpath:/resources/, classpath:/META-INF/resources/
+
   devtools:
     livereload:
       enabled: true #Reloading
@@ -24,7 +33,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
 
@@ -38,6 +47,8 @@ spring:
     user:
       name: test
       password: 1234
+
+    ignored: /css/**, /js/**, /img/**, /lib/**, /scss/**, /vendor/**, /fonts/**, /images/**, /webjars/**
 
   servlet:
     multipart:
@@ -54,3 +65,6 @@ logging:
         type:
           descriptor:
             sql: trace
+
+      springframework:
+        security: debug

@@ -64,3 +64,41 @@
     font-size: 0.9rem;
     margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+    .login-card {
+        padding: 20px; /* 모바일 화면에서 여백 줄이기 */
+    }
+
+    .login-card h1 {
+        font-size: 1.5rem; /* 제목 크기 조정 */
+    }
+
+    .login-card .form-control {
+        font-size: 0.9rem; /* 입력 필드 크기 줄이기 */
+    }
+
+    .login-card .btn {
+        padding: 8px; /* 버튼 크기 조정 */
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 15px; /* 더 좁은 화면에 맞게 여백 줄이기 */
+    }
+
+    .login-card h1 {
+        font-size: 1.3rem; /* 제목 크기 더 줄이기 */
+    }
+
+    .login-card .form-control {
+        font-size: 0.8rem; /* 입력 필드 크기 더 줄이기 */
+    }
+
+    .login-card .btn {
+        padding: 6px; /* 버튼 크기 더 줄이기 */
+        font-size: 0.8rem;
+    }
+}
