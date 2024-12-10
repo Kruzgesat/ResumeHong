@@ -1,0 +1,95 @@
+/*
+main {
+    flex: 1px;
+    margin: 50px 200px;
+}
+*/
+
+.resume-list {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.resume-list h1 {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.button-container .btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.button-container .btn:hover {
+    background-color: #0056b3;
+}
+
+
+.resume-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+.resume-table th, .resume-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.resume-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* 짝수 행 배경색 */
+.resume-table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* 홀수 행 배경색 */
+.resume-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+
+.resume-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .resume-list {
+        padding: 10px;
+    }
+
+    .resume-table {
+        font-size: 0.9rem;  /* 작은 화면에서 폰트 크기 줄이기 */
+    }
+}

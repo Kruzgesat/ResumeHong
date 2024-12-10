@@ -1,43 +1,42 @@
-/* 로그인 페이지 카드 스타일 */
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* 화면 전체에 가운데 정렬 */
-    background-color: #f8f9fa; /* 약간 밝은 배경 */
+    min-height: 100vh;
+    background-color: #f8f9fa;
 }
 
 .login-card {
-    background: #ffffff; /* 카드 배경 흰색 */
+    background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
     width: 100%;
-    max-width: 400px; /* 카드 최대 너비 */
+    max-width: 400px;
     text-align: center;
 }
 
 .login-card h1 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: #343a40; /* 제목 색상 */
+    color: #343a40;
 }
 
 .login-card .form-group {
     margin-bottom: 15px;
-    text-align: left; /* 입력 필드 왼쪽 정렬 */
+    text-align: left;
 }
 
 .login-card label {
     font-weight: bold;
     margin-bottom: 5px;
     display: block;
-    color: #495057; /* 라벨 색상 */
+    color: #495057;
 }
 
 .login-card .form-control {
     border-radius: 4px;
-    border: 1px solid #ced4da; /* 입력 필드 테두리 */
+    border: 1px solid #ced4da;
     padding: 10px;
     font-size: 1rem;
 }

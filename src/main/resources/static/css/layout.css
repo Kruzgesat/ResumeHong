@@ -31,11 +31,11 @@ header .navbar-brand {
 }
 
 header .navbar-brand:hover {
-    transform: scale(1.1); /* 로고를 호버 시 살짝 확대 */
+    transform: scale(1.1);
 }
 
 header .navbar-nav {
-    margin-left: auto; /* 버튼을 오른쪽으로 정렬 */
+    margin-left: auto;
 }
 
 header .nav-item {
@@ -52,8 +52,8 @@ header .nav-link {
 }
 
 header .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* 호버 시 배경 색상 추가 */
-    color: #ffc107; /* 텍스트 색상 변경 */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffc107;
 }
 
 header .navbar-toggler {
@@ -76,7 +76,7 @@ footer {
     color: #adb5bd;
     text-align: center;
     padding: 20px 0;
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* 하단 그림자 */
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer .page-footer {
@@ -92,5 +92,5 @@ footer a {
 }
 
 footer a:hover {
-    color: #ffc107; /* 호버 시 링크 색상 변경 */
+    color: #ffc107;
 }

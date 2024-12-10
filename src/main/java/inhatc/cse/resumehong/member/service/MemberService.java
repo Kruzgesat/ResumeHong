@@ -40,15 +40,7 @@ public class MemberService implements UserDetailsService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         Member member = memberRepository.findByEmail(email)
                 .orElseThrow(()-> new UsernameNotFoundException("해당 사용자 존재하지 않음" + email));
-        /*
-        Optional<Member> optMember = memberRepository.findByEmail(email);
-        if(optMember.isPresent()) {
-            Member member = optMember.get();
-        }
-        else {
-            throw new UsernameNotFoundException("해당 사용자 존재하지 않음" + email);
-        }
-        */
+
 
         log.info(member.toString());
 
@@ -58,4 +50,9 @@ public class MemberService implements UserDetailsService {
                 .roles(member.getRole().toString())
                 .build();
     }
+
+    public Member getUserByUsername(String email){
+        return memberRepository.findByEmail(email).orElseThrow(()-> new UsernameNotFoundException("해당 사용자 존재하지 않음" + email));
+    }
+
 }

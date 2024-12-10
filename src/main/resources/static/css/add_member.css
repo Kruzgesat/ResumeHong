@@ -48,7 +48,7 @@ button[type="submit"]:hover {
     background: #0056b3;
 }
 
-/* 드롭다운 스타일 추가 */
+/* Dropdown */
 #gender-select {
     width: 100%;
     padding: 10px;
@@ -58,7 +58,7 @@ button[type="submit"]:hover {
     background: #fff;
     color: #555;
     cursor: pointer;
-    appearance: none; /* 기본 드롭다운 화살표 제거 (브라우저별) */
+    appearance: none;
 }
 
 #gender-select:focus {

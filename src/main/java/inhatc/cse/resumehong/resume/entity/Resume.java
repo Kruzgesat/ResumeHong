@@ -12,7 +12,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
 public class Resume extends BaseEntity {
 
     @Id
@@ -47,6 +46,4 @@ public class Resume extends BaseEntity {
 
     @Column(nullable = false)           //Member's Introduction
     private String introduction;
-
-
 }
